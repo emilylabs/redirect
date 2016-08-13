@@ -1,4 +1,4 @@
-FROM php:latest
+FROM webdevops/php-nginx:latest
 
 MAINTAINER Minecraftly Inc <dev@minecraftly.com>
 
@@ -8,7 +8,9 @@ VOLUME /data
 WORKDIR /data
 
 COPY index.php /data
+COPY index.php /application/code/
+COPY index.php /application/code
 
 EXPOSE 80
 
-CMD [ "php" ]
+CMD ["supervisord"]
