@@ -1,4 +1,4 @@
-FROM webdevops/php-nginx:latest
+FROM webdevops/php-apache:latest
 
 MAINTAINER Minecraftly Inc <dev@minecraftly.com>
 
