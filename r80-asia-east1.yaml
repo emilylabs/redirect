@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: 80-europe-west1
+  name: r80-asia-east1
   labels:
     app: redirect
     tier: frontend
-    version: 80-europe-west1
+    version: r80-asia-east1
 spec:
   type: LoadBalancer
-  loadBalancerIP: 104.155.71.16
+  loadBalancerIP: 104.155.206.50
   sessionAffinity: None
   ports:
   - port: 80
