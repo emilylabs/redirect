@@ -25,9 +25,9 @@ ENV ALLOW_OVERRIDE **False**
 ADD run.sh /run.sh
 RUN chmod 755 /*.sh
 
-# Configure /app folder with sample
+# Configure /app folder with src
 RUN mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html
-ADD sample/ /app
+ADD src/ /app
 
 EXPOSE 80
 WORKDIR /app
