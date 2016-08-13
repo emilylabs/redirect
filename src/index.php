@@ -69,7 +69,7 @@ for( $i = 0; $i < 16; $i++ ) {
 		$resolvedNew = $dnsResolvedArray[0]['target'];
 		if( strtolower( $resolvedNew ) === "m.ly" ) break;
 		if( isset( $resolvedNew ) && !empty( $resolvedNew ) ) $resolved = $resolvedNew;
-		//header( "x-test-header-$i: " . $dnsResolvedArray[0]['target'] );
+		if( $debug ) header( "x-test-header-$i: " . $dnsResolvedArray[0]['target'] );
 		
 	} else {
 		break;
