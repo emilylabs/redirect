@@ -1,4 +1,4 @@
-FROM php:5.6
+FROM php:latest
 
 MAINTAINER Minecraftly Inc <dev@minecraftly.com>
 
@@ -11,4 +11,4 @@ COPY index.php /data
 
 EXPOSE 80
 
-CMD [ "php", "./index.php" ]
+CMD [ "php" ]
