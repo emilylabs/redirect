@@ -1,4 +1,4 @@
-FROM php:latest
+FROM php:5
 
 MAINTAINER Minecraftly Inc <dev@minecraftly.com>
 
