@@ -1,9 +1,9 @@
 <?php
 
 // Configuration.
-$cacheEnabled = false;
-$pathToPhpFastCache = "tempDir/phpfastcache.php";
-$cacheTimeInSeconds = 60;
+$cacheEnabled = true;
+$pathToPhpFastCache = "includes/phpfastcache.php";
+$cacheTimeInSeconds = 3600;
 
 $debug = false;
 
@@ -110,7 +110,7 @@ if( $name === "m" || ( !$isUuid && !$isName ) ) {
 
 // If it's already an UUID, just redirect.
 if( $isUuid ) {
-	header( "Location: https://minecraftly.com/u/" . urlencode( $name ) );
+	header( "Location: https://minecraftly.com/" . urlencode( $name ) );
 	exit;
 }
 
@@ -135,7 +135,7 @@ d( "Final UUID: " . $uuid );
 if( !isset( $uuid ) || empty( $uuid ) ) {
 	header( "Location: https://minecraftly.com/" );
 } else {
-	header( "Location: https://minecraftly.com/u/" . urlencode( $uuid ) );
+	header( "Location: https://minecraftly.com/" . urlencode( $uuid ) );
 }
 
 exit;
