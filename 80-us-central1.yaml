@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: redirect-svc-us-west1
+  name: 80-us-central1
   labels:
     app: redirect
     tier: frontend
-    version: redirect-svc-us-west1
+    version: 80-us-central1
 spec:
   type: LoadBalancer
-  loadBalancerIP: 104.198.101.141
+  loadBalancerIP: 130.211.154.185
   sessionAffinity: None
   ports:
   - port: 80
