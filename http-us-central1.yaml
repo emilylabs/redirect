@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: r80-us-east1
+  name: http-us-central1
   labels:
     app: redirect
     tier: frontend
-    version: r80-us-east1
+    version: http-us-central1
 spec:
   type: LoadBalancer
-  loadBalancerIP: 104.196.187.99
+  loadBalancerIP: 130.211.154.185
   sessionAffinity: None
   ports:
   - port: 80
