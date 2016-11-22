@@ -1,7 +1,7 @@
 <?php
 
 // Configuration.
-$cacheEnabled = true;
+$cacheEnabled = false;
 $pathToPhpFastCache = "includes/phpfastcache.php";
 $cacheTimeInSeconds = 3600;
 

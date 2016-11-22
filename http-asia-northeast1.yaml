@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: http-asia-northeast1
+  labels:
+    app: redirect
+    tier: frontend
+    version: http-asia-northeast1
+spec:
+  type: LoadBalancer
+  loadBalancerIP: 104.198.84.34
+  sessionAffinity: None
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+  selector:
+    app: redirect
+    tier: frontend

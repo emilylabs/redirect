@@ -1,24 +1,24 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: redirect20160910-1
+  name: redirect20161122-1
   labels:
     state: serving
     tier: frontend
-    version: redirect20160910-1
+    version: redirect20161122-1
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     app: redirect
     tier: frontend
-    version: redirect20160910-1
+    version: redirect20161122-1
   template:
     metadata:
       name: redirect
       labels:
         app: redirect
         tier: frontend
-        version: redirect20160910-1
+        version: redirect20161122-1
     spec:
       volumes: null
       containers:
