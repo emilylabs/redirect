@@ -32,7 +32,7 @@ function resolveUuid( $nameToResolve ) {
 			CURLOPT_USERAGENT 	   => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
 		);
 
-		$ch = curl_init( "https://api.minepay.net/mojang/v1/name/" . urlencode( $nameToResolve ) );
+		$ch = curl_init( "https://mcapi.ca/profile/" . urlencode( $nameToResolve ) );
 		curl_setopt_array($ch, $options);
 		$content  = curl_exec($ch);
 		$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
