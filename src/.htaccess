@@ -1,5 +1,0 @@
-RewriteEngine On
-# anything that is not equal to m.ly
-RewriteCond %{HTTP_HOST} !^m\.ly$
-# redirects to https://minecraftly.com/anything
-RewriteRule ^/?(.*)$ https://minecraftly.com/$1 [R=301,L]
