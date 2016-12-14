@@ -1,4 +1,10 @@
 FROM php:7.0-cli
-COPY . /php
-WORKDIR /php
+
+MAINTAINER Minecraftly <dev@minecraftly.com>
+
+COPY /php /data
+WORKDIR /data
+
+EXPOSE 80
+
 CMD [ "php", "./redirect.php" ]
